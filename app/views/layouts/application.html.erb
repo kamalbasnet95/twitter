@@ -11,22 +11,56 @@
 
   <body>
     <header> 
-    <% if signed_in? %>
+    <nav class="navbar is-info">
+      <div class "navbar-brand"> 
+      <% link_to root_path, class: "navbar-item" do %>
+      <h1 class="title"> Twittter</h1> 
+      <% end %> 
+
+      </div>
+    
+   
+    
+    <div class="Navbar-burger burger" data-target=" navbarExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+      <div id ="navbarExample" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="field is-grouped">
+            <p class="control">
+            <%= link_to 'New Tweeeet', new_tweeeet_path, class:"button is-info is-inverted"%> 
+            </p>
+             <% if signed_in? %>
       Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete %>
+      <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted" %>
     <% else %>
-      <%= link_to 'Sign in', sign_in_path %>
+      <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted" %>
     <% end %>
+
     </header>
     <section>
     <div id="flash">
       <% flash.each do |key, value| %>
         <div class="flash <%= key %>"><%= value %></div>
       <% end %>
+    </div>
+    </section>
+          </div>
+        </div>
       </div>
-
-    
+    </div>
+    </nav>
       <%= yield %>
-      </section>
+      
+
+
+
+
+
+
+     
   </body>
 </html>
