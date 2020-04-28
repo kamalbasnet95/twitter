@@ -23,4 +23,7 @@
   </div>
   
 <% end %>
-
+<% if signed_in? %>
+ <%= render 'following' %> 
+  
+<% end %>
