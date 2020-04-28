@@ -18,21 +18,18 @@
       <h1 class="title is-5"><i class="fa fa-twitter" ></i>  Twittter</h1> 
       <% end %> 
     <div class="Navbar-burger burger" data-target=" navbarExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     
+    </div>
       <div id ="navbarExample" class="navbar-menu">
         <div class="navbar-end">
           <div class="field is-grouped">
             <p class="control">
-            <%= link_to 'New Tweeeet', new_tweeeet_path, class:"button is-info is-inverted"%> 
+            <%= link_to 'New Tweeeet', new_tweeeet_path, class:"button is-info is-inverted is-mobile"%> 
             </p>
              <% if signed_in? %> <%= current_user.name %>
-              <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted" %>
+              <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted is-mobile" %>
             <% else %>
-           <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted" %>
+           <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted is-mobile" %>
           <% end %>
 
     </header>
