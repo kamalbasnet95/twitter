@@ -1,14 +1,17 @@
-<% if signed_in? %>
+
+
+<div class="column">
+	<% if signed_in? %>
 	<div class="media-left">
 			<figure class="image is-64x64">
 				<img src="https://bulma.io/images/placeholders/64x64.png">
 			</figure>
+			<div class="media-content">
 			<strong> <%= current_user.name %></strong>
-			<p><%= current_user.username</p>
+			<p><%= current_user.username %></p>
+			</div> 
 		</div>
 	<%end%> 
-
-<div class="column">
 	<nav class="panel">
 		<p class="panel-heading">
 			Trends
