@@ -29,7 +29,7 @@
             <p class="control">
             <%= link_to 'New Tweeeet', new_tweeeet_path, class:"button is-info is-inverted"%> 
             </p>
-             <% if signed_in? %> <%= current_user.name %><br />
+             <% if signed_in? %> <%= current_user.name %>
               <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted" %>
             <% else %>
            <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted" %>
