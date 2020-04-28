@@ -11,85 +11,56 @@
 
 	 <div class="tab-content">
 	 	<div class="tab-pane fade in active" id="foryou">
-	 		<div class="column is-half">
-	<% if signed_in? %>
-	<article class="media box">
-		<figure class="media-left">
-			<p class="image is-64x64">
-				<img src="https://bulma.io/images/placeholders/64x64.png">
-			</p>
-		</figure>
-		<div class="media-content"> 
-			<%=render'tweeeets/form' %> 
-		</div>
-	</article>
-	<%end%> 
-<% @tweeeets.each do | tweeet | %>
-<div class = "box">
-	<article class="media">
-		<div class="media-left">
-			<figure class="image is-64x64">
-				<img src="https://bulma.io/images/placeholders/64x64.png">
-			</figure>
-		</div>
-		<div class="media-content">
-			<div class="content">
-				<strong><%= tweeet.user.name%> </strong> <br />
-				<p> @<%= tweeet.user.username%> </p>
-				<p> <%= tweeet.tweeet %> </p>
+			<div class="column">
+				<% if signed_in? %>
+				<article class="media box">
+					<figure class="media-left">
+						<p class="image is-64x64">
+							<img src="https://bulma.io/images/placeholders/64x64.png">
+						</p>
+					</figure>
+					<div class="media-content"> 
+						<%=render'tweeeets/form' %> 
+					</div>
+				</article>
+				<%end%> 
+			<% @tweeeets.each do | tweeet | %>
+			<div class = "box">
+				<article class="media">
+					<div class="media-left">
+						<figure class="image is-64x64">
+							<img src="https://bulma.io/images/placeholders/64x64.png">
+						</figure>
+					</div>
+					<div class="media-content">
+						<div class="content">
+							<strong><%= tweeet.user.name%> </strong> <br />
+							<p> @<%= tweeet.user.username%> </p>
+							<p> <%= tweeet.tweeet %> </p>
+						</div>
+						<nav class="level"> 
+							<div class="level-left is-mobile">
+								<%= link_to tweeet, class: "level-item" do%>
+									<span class="icon"><i class="fa fa-link"></i></span>
+								<% end %>	
+								<%= link_to edit_tweeeet_path(tweeet), class: "level-item" do%>
+									<span class="icon"><i class="fa fa-pencil"></i></span>
+								<% end %>	
+								<%= link_to tweeet, method: :delete, data: { confirm: "Are you sure you want to delete this tweeet?" } do %>
+									<span class="icon"><i class="fa fa-trash-o"></i></span>
+								<% end %>	
+
+							</div>
+						</nav>
+
+					</div>
+				</article>
+
 			</div>
-			<nav class="level"> 
-				<div class="level-left is-mobile">
-					<%= link_to tweeet, class: "level-item" do%>
-						<span class="icon"><i class="fa fa-link"></i></span>
-					<% end %>	
-					<%= link_to edit_tweeeet_path(tweeet), class: "level-item" do%>
-						<span class="icon"><i class="fa fa-pencil"></i></span>
-					<% end %>	
-					<%= link_to tweeet, method: :delete, data: { confirm: "Are you sure you want to delete this tweeet?" } do %>
-						<span class="icon"><i class="fa fa-trash-o"></i></span>
-					<% end %>	
 
-				</div>
-			</nav>
-
-		</div>
-	</article>
-
-</div>
-
-<% end %>
+			<% end %>
 	 	</div>
-	 	<div class="tab-pane fade" id="foryou">
-	 		<p> this is for the testing2</p>
-	 	</div>
-	 	<div class="tab-pane fade"  id="trends">
-	 		<p> this is for the testing3</p>
-	 	</div>
-	 	<div class="tab-pane fade" id="sports">
-	 		<p> this is for the testing4</p>
-	 	</div>
-	 	<div class="tab-pane fade " id="foryou">
-	 		<p> this is for the testing5</p>
-	 	</div>
-	 	<div class="tab-pane fade " id="fun">
-	 		<p> this is for the testing6</p>
-	 	</div>
-	 	<div class="tab-pane fade" id="enter">
-	 		<p> this is for the testing7</p>
-	 	</div>
-	 	<div class="tab-pane fade " id="foryou">
-	 		<p> this is for the testing8</p>
-	 	</div>
-	 	<div class="tab-pane fade" id="trends">
-	 		<p> this is for the testing9</p>
-	 	</div>
-	 	<div class="tab-pane fade" id="sports">
-	 		<p> this is for the testing0</p>
-	 	</div>
-	 	<div class="tab-pane" id="foryou">
-	 		<p> this is for the testing11</p>
-	 	</div>
+	 	
 	 	
 
 
