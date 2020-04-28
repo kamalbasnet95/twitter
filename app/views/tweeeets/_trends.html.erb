@@ -1,10 +1,14 @@
 
 <div class="column">
 	<% if signed_in? %>
-	<div class="media-content">
+	<div class="media-left">
+			<figure class="image is-64x64">
+				<img src="https://bulma.io/images/placeholders/64x64.png">
+			</figure>
+		<div class="media-content">
 			<div class="content">
-				<strong><%= tweeet.user.name%> </strong> <br />
-				<p> @<%= tweeet.user.username%> </p>
+				<strong><%= current_user.name%> </strong> <br />
+				<p> @<%= current_user.username%> </p>
 				<p></p>
 			</div>
 	<%end%> 
