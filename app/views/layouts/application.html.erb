@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
+    <%= stylesheet_link_tag 'http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     
   </head>
 
@@ -15,7 +15,7 @@
     <header> 
     <nav class="navbar is-info">
       <%= link_to root_path, class: "navbar-item"  do %>
-      <h1 class="title is-5"> Twittter</h1> 
+      <h1 class="title is-5"><i class="fa fa-twitter" ></i>  Twittter</h1> 
       <% end %> 
     <div class="Navbar-burger burger" data-target=" navbarExample">
       <span></span>
@@ -29,18 +29,17 @@
             <p class="control">
             <%= link_to 'New Tweeeet', new_tweeeet_path, class:"button is-info is-inverted"%> 
             </p>
-             <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-      <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted" %>
-    <% else %>
-      <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted" %>
-    <% end %>
+             <% if signed_in? %> <%= current_user.name %><br />
+              <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted" %>
+            <% else %>
+           <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted" %>
+          <% end %>
 
     </header>
     <section>
     <div id="flash">
       <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
+        <div class="flash <%= key %> has-text-centered"><%= value %></div>
       <% end %>
     </div>
     </section>

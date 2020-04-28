@@ -15,7 +15,7 @@ class TweeeetsController < ApplicationController
 
   # GET /tweeeets/new
   def new
-    @tweeeet = Tweeeet.new
+    @tweeeet = current_user.Tweeeets.build
   end
 
   # GET /tweeeets/1/edit
@@ -25,7 +25,7 @@ class TweeeetsController < ApplicationController
   # POST /tweeeets
   # POST /tweeeets.json
   def create
-    @tweeeet = Tweeeet.new(tweeeet_params)
+    @tweeeet = current_user.Tweeeets.build(tweeeet_params)
 
     respond_to do |format|
       if @tweeeet.save
@@ -57,7 +57,7 @@ class TweeeetsController < ApplicationController
   def destroy
     @tweeeet.destroy
     respond_to do |format|
-      format.html { redirect_to tweeeets_url, notice: 'Tweeeet was successfully destroyed.' }
+      format.html { redirect_to tweeeets_url, notice: 'Tweeeet was successfully removed.' }
       format.json { head :no_content }
     end
   end

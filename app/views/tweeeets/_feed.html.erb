@@ -1,5 +1,6 @@
 
-<div class="column">
+<div class="column is-half">
+	<% if signed_in? %>
 	<article class="media box">
 		<figure class="media-left">
 			<p class="image is-64x64">
@@ -10,7 +11,7 @@
 			<%=render'tweeeets/form' %> 
 		</div>
 	</article>
-
+	<%end%> 
 <% @tweeeets.each do | tweeet | %>
 <div class = "box">
 	<article class="media">
@@ -21,8 +22,8 @@
 		</div>
 		<div class="media-content">
 			<div class="content">
-				<strong> Kamal Banset</strong><br />
-				<small> @kamalbasnet</small> <br />
+				<strong><%= tweeet.user.name%> </strong> <br />
+				<p> @<%= tweeet.user.username%> </p>
 				<p> <%= tweeet.tweeet %> </p>
 			</div>
 			<nav class="level"> 
