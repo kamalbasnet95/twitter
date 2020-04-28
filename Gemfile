@@ -24,12 +24,20 @@ gem 'jbuilder', '~> 2.7'
 
 # clearanc for user authentication
 gem 'clearance', '~> 1.12', '>= 1.12.1'
+
 gem "actionview", ">= 6.0.2.2"
+#css
 gem 'bulma-rails', '~> 0.8.0'
+#tweeet form
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 gem 'gravatar_image_tag'
 
+#bootstrap
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'sassc-rails', '>= 2.1.0'
 # Use Active Storage variant
+gem 'jquery-rails'
+
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
