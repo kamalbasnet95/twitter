@@ -3,32 +3,33 @@
  <%= render 'trends' %> 
  <% else %>
   <div class="box">
-  <div id="clearance" class="sign-in">
-    <i class="fa fa-twitter" ></i>
-    <h2> Log in to Twitter</h2>
-    <%= form_for :session, url: session_path do |form| %>
-    <div class="is-centered">
-      <div class="text-field">
-       <%= form.label :Email%>
-       <%= form.text_field :email, type: 'email'%>
-      </div>
-      <div class="password-field">
-        <%= form.label :password %>
-        <%= form.password_field :password %>
-      </div>
+    <div id="clearance" class="sign-in">
+      <i class="fa fa-twitter" ></i>
+      <h2> Log in to Twitter</h2>
+      <%= form_for :session, url: session_path do |form| %>
+      <div class="is-centered">
+        <div class="text-field">
+         <%= form.label :Email%>
+         <%= form.text_field :email, type: 'email'%>
+        </div>
+        <div class="password-field">
+          <%= form.label :password %>
+          <%= form.password_field :password %>
+        </div>
 
-      <div class="submit-field">
-        <%= form.submit %>
+        <div class="submit-field">
+          <%= form.submit %>
+        </div>
       </div>
-    </div>
-      <div class="other-links">
-        <% if Clearance.configuration.allow_sign_up? %>
-          <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
-        <% end %> 
+        <div class="other-links">
+          <% if Clearance.configuration.allow_sign_up? %>
+            <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
+          <% end %> 
+          
+          <%= link_to t(".*forgot_password"), new_password_path %>
+        </div>
         
-        <%= link_to t(".*forgot_password"), new_password_path %>
-      </div>
-      
-      <% end %>
-   </div> 
+        <% end %>
+      </div> 
+ </div>
 <% end %>
