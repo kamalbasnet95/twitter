@@ -1,5 +1,4 @@
-
-<div class="column">
+<div class="box">
     <div id="clearance" class="sign-in">
       <div class="has-text-centered">
       <i class="fa fa-twitter" ></i>
@@ -21,23 +20,30 @@
               
           </div>
         </div>
-        <div class="submit-field">
+        <%= link_to t(".*forgot_password"), new_password_path %>
+        
+        
+        <div class="other-links">
+          <div class="submit-field">
           <%= form.submit %>
+          </div>
+          <% if Clearance.configuration.allow_sign_up? %>
+            <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
+          <% end %> 
         </div>
-         
-      </div>
+        <div class="other-links">
+            <% if Clearance.configuration.allow_sign_up? %>
+               <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
+            <% end %> 
+    
+            <%= link_to t(".*forgot_password"), new_password_path %>
+        </div>
   
-      <% end %>
+        <% end %>
       </div>
     </div> 
  </div>
-  <div class="other-links">
-    <% if Clearance.configuration.allow_sign_up? %>
-      <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
-    <% end %> 
-    
-    <%= link_to t(".*forgot_password"), new_password_path %>
-  </div>
   
-<% end %>
+  
+
 
