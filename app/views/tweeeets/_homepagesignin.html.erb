@@ -10,8 +10,9 @@
       <%= form_for :session, url: session_path do |form| %>
       <div class="box is-centered">
         <div class="field">
-         <%= form.label :Email class: "label"%>
-         <%= form.text_field :email, type: 'email' class: "fields"%>
+          <div class="label">
+         <%= form.label :Email%></div>
+         <div class= "field"><%= form.text_field :email, type: 'email' %> </div> 
         </div>
         <div class="password-field">
           <%= form.label :password %>
