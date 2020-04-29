@@ -2,15 +2,22 @@
 <% if signed_in? %>
  <%= render 'trends' %> 
  <% else %>
-  <div class="box is-centered">
+  <div class="">
     <div id="clearance" class="sign-in">
       <i class="fa fa-twitter" ></i>
       <h2> Log in to Twitter</h2>
+
       <%= form_for :session, url: session_path do |form| %>
-      <div class="is-centered">
-        <div class="text-field">
+      <div class="box is-centered">
+        <div class="field">
          <%= form.label :Email%>
          <%= form.text_field :email, type: 'email'%>
+         <div class="control has-icons-left">
+                <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
         </div>
         <div class="password-field">
           <%= form.label :password %>
