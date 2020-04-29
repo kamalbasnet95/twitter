@@ -1,42 +1,45 @@
-<div class="box">
-    <div id="clearance" class="sign-in">
-   
-      <%= form_for :session, url: session_path do |form| %>
-      <div class=" box ">
-        <div class="field">
-          <%= form.label :Email%>
-          
-              <%= form.text_field :email, type: 'email' %>
-           
-        </div>
-        <div class="password-field">
-          <%= form.label :password %>
-          
-              <%= form.password_field :password %>     
-         
-        </div>
-        
-        <div class="other-links">
-          <div class="submit-field">
-          <%= form.submit %>
+
+  <div id="clearance" class="sign-in">
+ 
+    <%= form_for :session, url: session_path do |form| %>
+    <div class=" box">
+      <div class="field">
+        <%= form.label :Email%>
+         <div class="control has-icons-left">
+            <%= form.text_field :email, type: 'email' %>
           </div>
-          <% if Clearance.configuration.allow_sign_up? %>
-            <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
-          <% end %> 
-        </div>
-        <div class="other-links">
-            <% if Clearance.configuration.allow_sign_up? %>
-               <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
-            <% end %> 
-    
-            <%= link_to t(".*forgot_password"), new_password_path %>
-        </div>
-  
-        <% end %>
       </div>
-    </div> 
- </div>
+      <div class="password-field">
+        <%= form.label :password %>
+        <div class="control has-icons-left">
+            <%= form.password_field :password %>
+            
+        </div>
+      </div>
+      <%= link_to t(".*forgot_password"), new_password_path %>
+      
+      
+      <div class="other-links">
+        <div class="submit-field">
+        <%= form.submit %>
+        </div>
+        <% if Clearance.configuration.allow_sign_up? %>
+          <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
+        <% end %> 
+      </div>
+      <div class="other-links">
+          <% if Clearance.configuration.allow_sign_up? %>
+             <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
+          <% end %> 
   
-  
+          <%= link_to t(".*forgot_password"), new_password_path %>
+      </div>
+
+      <% end %>
+    </div>
+  </div> 
+
+
+
 
 
