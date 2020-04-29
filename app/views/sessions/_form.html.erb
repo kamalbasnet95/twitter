@@ -5,18 +5,18 @@
     <div class=" box has-text-centered">
       <div class="field">
         <%= form.label :Email%>
-         <div class="control">
+         <div class="control is-centered has-text-centered">
             <%= form.text_field :email, type: 'email' %>
           </div>
       </div>
       <div class="password-field">
         <%= form.label :password %>
-        <div class="control">
+        <div class="control is-centered has-text-centered ">
             <%= form.password_field :password %>
             
         </div>
       </div>
-      <%= link_to t(".*forgot_password"), new_password_path %>
+    
       
       
       <div class="other-links">
