@@ -10,9 +10,13 @@
       <%= form_for :session, url: session_path do |form| %>
       <div class="box is-centered">
         <div class="field">
-          <div class="label">
-         <%= form.label :Email%></div>
-         <div class= "field"><%= form.text_field :email, type: 'email' %> </div> 
+         <label class="label">Email</label>
+           <div class="control has-icons-left has-icons-right">
+              <%= form.text_field :email, type: 'email' %>
+               <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+            </div>
         </div>
         <div class="password-field">
           <%= form.label :password %>
