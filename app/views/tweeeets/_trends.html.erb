@@ -40,14 +40,11 @@
 	  <a class="list-item">
 	   <i class="fa fa-ellipsis-h" ></i> <strong> More </strong>
 	  </a>
-	  <a class="list-item">
 	  	<% if signed_in? %>
 	  	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-info"%> 
       	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
     	<% end %>
      	
-  	
-		</a>
 	</div>
 	
 	
