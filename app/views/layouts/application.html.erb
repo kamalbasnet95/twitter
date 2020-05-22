@@ -10,7 +10,9 @@
     <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     
   </head>
-
+  <% if signed_in? %>
+  <h1 class="title is-5"><i class="fa fa-twitter" ></i>  Twittter</h1> 
+   <% else %>
   <body>
     <header> 
     <nav class="navbar is-info">
@@ -31,28 +33,27 @@
             <% else %>
            <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted is-mobile" %>
           <% end %>
-
-    </header>
-    <section>
-    <div id="flash">
-      <% flash.each do |key, value| %>
-        <div class="flash <%= key %> has-text-centered"><%= value %></div>
-      <% end %>
-    </div>
-    </section>
-          </div>
         </div>
       </div>
     </div>
     </nav>
+  </header>
+  <section>
+      <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %> has-text-centered"><%= value %></div>
+      <% end %>
+      </div>
+    </section>
       <%= yield %>
       
 
-
+   
 
 
 
 
      
   </body>
+   <%end%> 
 </html>
