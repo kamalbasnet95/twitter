@@ -18,31 +18,32 @@
 	</div>
 	<div class="list is-hoverable ">
 	  <a class="list-item ">
-	    Home
+	    <i class="fa fa-home" ></i> Home
 	  </a>
 	  <a class="list-item">
-	    #Explore
+	   <i class="fa fa-hashtag" ></i> Explore
 	  </a>
 	  <a class="list-item">
-	    Notifications
+	   <i class="fa fa-bell" ></i>  Notifications
 	  </a>
 	  <a class="list-item">
-	    Messages
+	   <i class="fa fa-envelope" ></i>  Messages
 	  </a>
 	  <a class="list-item">
-	    Bookmark
+	   <i class="fa fa-bookmark" ></i> Bookmark
 	  </a>
 	  <a class="list-item">
-	    Lists
+	    <i class="fa fa-list" ></i> Lists
 	  </a>
 	  <a class="list-item">
-	    Profile
+	   <i class="fa fa-user" ></i>  Profile
 	  </a>
 	  <a class="list-item">
-	    More
+	   <i class="fa fa-ellipsis-h" ></i> More
 	  </a>
 	  <a class="list-item">
 	  	<% if signed_in? %>
+	  	<i class="fa fa-sign-out-alt"></i>
       	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
     	<% end %>
 		</a>
