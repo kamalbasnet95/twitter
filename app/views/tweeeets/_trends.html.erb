@@ -24,7 +24,7 @@
 	  <a class="list-item">
 	   <i class="fa fa-ellipsis-h" ></i> <strong> More </strong>
 	  </a>
-	  <a>
+	  <a class="list-item">
 	  	<% if signed_in? %>
 	  	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-info"%> 
     	<% end %>
@@ -43,7 +43,7 @@
 					<p>@<%= current_user.username %></p>
 				</div>		
 			</div> 
-		</article>
+		</article><br />
 		<% if signed_in? %>
       	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
     	<% end %>
