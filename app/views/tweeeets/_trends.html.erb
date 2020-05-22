@@ -18,37 +18,35 @@
 	</div>
 	<div class="list is-hoverable ">
 	  <a class="list-item ">
-	    <i class="fa fa-home" ></i> Home
+	    <i class="fa fa-home" ></i> <strong>Home</strong>
 	  </a>
 	  <a class="list-item">
-	   <i class="fa fa-hashtag" ></i> Explore
+	   <i class="fa fa-hashtag" ></i> <strong>Explore</strong>
 	  </a>
 	  <a class="list-item">
-	   <i class="fa fa-bell" ></i>  Notifications
+	   <i class="fa fa-bell" ></i>  <strong> Notifications</strong>
 	  </a>
 	  <a class="list-item">
-	   <i class="fa fa-envelope" ></i>  Messages
+	   <i class="fa fa-envelope" ></i> <strong>Messages</strong> 
 	  </a>
 	  <a class="list-item">
-	   <i class="fa fa-bookmark" ></i> Bookmark
+	   <i class="fa fa-bookmark" ></i> <STRONG>Bookmark</STRONG> 
 	  </a>
 	  <a class="list-item">
-	    <i class="fa fa-list" ></i> Lists
+	    <i class="fa fa-list" ></i> <strong> Lists </strong>
 	  </a>
 	  <a class="list-item">
-	   <i class="fa fa-user" ></i>  Profile
-	  </a>
+	   <i class="fa fa-user" ></i> <strong> Profile </strong> 
 	  <a class="list-item">
-	   <i class="fa fa-ellipsis-h" ></i> More
+	   <i class="fa fa-ellipsis-h" ></i> <strong> More </strong>
 	  </a>
 	  <a class="list-item">
 	  	<% if signed_in? %>
 	  	<i class="fa fa-sign-out-alt"></i>
       	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
     	<% end %>
-    	<p class="control">
-     	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-link"%> 
-  		</p>
+     	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-info"%> 
+  	
 		</a>
 	</div>
 	
