@@ -46,13 +46,14 @@
 	  	<i class="fa fa-sign-out-alt"></i>
       	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
     	<% end %>
+    	<p class="control">
+     	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-link"%> 
+  		</p>
 		</a>
 	</div>
-	<div class = "box has-text-centered">
-	<p class="control">
-     <%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-link"%> 
-  	</p>
-  </div>
+	
+	
+
 	<%end%> 
 	
 </div>
