@@ -2,10 +2,13 @@
  <%= render 'trendsforyou' %> 
  <% else %>
   <div class="column is-one-third">
+    <p class="image">
+              <img src="https://abs.twimg.com/sticky/illustrations/twitter_login_sidebar_illustration.png">
+    </p>
     <div id="clearance" class="sign-in">
-      <div class="has-text-centered">
+      <div class="">
       <i class="fa fa-twitter" ></i>
-      <h2 class=""> Log in to Twitter</h2>
+      <h2> Log in to Twitter</h2>
       </div>
       <br />
       <%= form_for :session, url: session_path do |form| %>
