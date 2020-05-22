@@ -28,12 +28,11 @@
         <br />
         <div class="other-links">
           <div class="submit-field">
-          <%= form.submit %>
+          <%= form.submit , class:"button is-info" %>
           </div>
           <% if Clearance.configuration.allow_sign_up? %>
-            <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
-          <% end %>      
-          <%= link_to t(".*forgot_password"), new_password_path %>
+            <%= link_to t(".Sign Up"), sign_up_path, class:"button is-info" %>
+          <% end %>     
         </div>
   
         <% end %>
