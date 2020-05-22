@@ -42,8 +42,15 @@
 	  <a class="list-item">
 	    More
 	  </a>
+	  <a class="list-item">
+	  	<% if signed_in? %> <%= current_user.name %>
+      	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info is-inverted is-mobile" %>
+    	<% end %>
+		</a>
 	</div>
 	<%end%> 
+
+	
 
 	
 
