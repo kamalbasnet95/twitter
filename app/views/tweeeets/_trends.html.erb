@@ -24,10 +24,11 @@
 	  <a class="list-item">
 	   <i class="fa fa-ellipsis-h" ></i> <strong> More </strong>
 	  </a>
+	  <a>
 	  	<% if signed_in? %>
 	  	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-info"%> 
     	<% end %>
-     	
+     </a>
 	</div>
 	<div class = "box">
 		<article class="media">

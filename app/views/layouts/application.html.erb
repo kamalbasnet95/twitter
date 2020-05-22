@@ -60,7 +60,25 @@
       </div>
     </section>
   <%= yield %>
-
+  <div class = "box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="https://bulma.io/images/placeholders/64x64.png">
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <strong> <%= current_user.name %></strong>
+          <p>@<%= current_user.username %></p>
+        </div>    
+      </div> 
+    </article>
+    <% if signed_in? %>
+        <%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
+      <% end %>
+  
+  </div>
 
 
   <%end%> 
