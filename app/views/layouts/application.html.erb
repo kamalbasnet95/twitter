@@ -12,7 +12,7 @@
   </head>
  
   <body>
-     
+     <% if signed_in? %>
     <header> 
     <nav class="navbar is-info">
       <%= link_to root_path, class: "navbar-item"  do %>
@@ -39,10 +39,8 @@
       <div id ="navbarExample" class="navbar-menu">
         <div class="navbar-end">
           <div class="field is-grouped">
-          <% if Clearance.configuration.allow_sign_up? %>
-            <%= link_to t("Sign up"), sign_up_path, class:"button is-info is-inverted is-mobile"%>
-          <% end %> 
-          <span></span><span></span>
+          <%= button_to 'Sign Up ', sign_up_path, method: :delete, class:"button is-info is-inverted is-mobile" %>
+          
            <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted is-mobile" %>
           </div>
         </div>
