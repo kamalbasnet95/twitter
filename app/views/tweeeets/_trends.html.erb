@@ -42,10 +42,10 @@
 	  </a>
 	  <a class="list-item">
 	  	<% if signed_in? %>
-	  	<i class="fa fa-sign-out-alt"></i>
+	  	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-info"%> 
       	<%= button_to 'Sign out', sign_out_path, method: :delete, class:"button is-info" %>
     	<% end %>
-     	<%= link_to 'Tweeeet', new_tweeeet_path, class:"button is-info"%> 
+     	
   	
 		</a>
 	</div>
