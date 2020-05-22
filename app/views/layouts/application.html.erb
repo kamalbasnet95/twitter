@@ -13,9 +13,22 @@
  
   <body>
      <% if signed_in? %>
-    <h1 class="title is-5"><i class="fa fa-twitter" ></i>  Twittter</h1> 
-    <% else %>
     <header> 
+    <nav class="navbar is-info">
+      <%= link_to root_path, class: "navbar-item"  do %>
+      <h1 class="title is-5"><i class="fa fa-twitter" ></i>  Twittter</h1> 
+      <% end %>
+    </header>
+  <section>
+      <div id="flash">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %> has-text-centered"><%= value %></div>
+      <% end %>
+      </div>
+    </section>
+  <%= yield %>
+  <% else %>
+ <header> 
     <nav class="navbar is-info">
       <%= link_to root_path, class: "navbar-item"  do %>
       <h1 class="title is-5"><i class="fa fa-twitter" ></i>  Twittter</h1> 
@@ -35,9 +48,9 @@
            <%= link_to 'Sign in', sign_in_path, class:"button is-info is-inverted is-mobile" %>
           <% end %>
           </div>
-          </div>
-          </div>
-          </nav>
+        </div>
+      </div>
+    </nav>
     </header>
   <section>
       <div id="flash">
@@ -46,7 +59,10 @@
       <% end %>
       </div>
     </section>
-      <%= yield %>
+  <%= yield %>
+
+
+
   <%end%> 
   </body>
    
