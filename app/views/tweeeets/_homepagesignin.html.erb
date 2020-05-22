@@ -1,11 +1,11 @@
 <% if signed_in? %>
  <%= render 'trendsforyou' %> 
  <% else %>
-  <div class="column">
+  <div class="column is-two-fifths">
     <div id="clearance" class="sign-in">
       <div class="has-text-centered">
       <i class="fa fa-twitter" ></i>
-      <h2 class="has-text-centered"> Log in to Twitter</h2>
+      <h2 class=""> Log in to Twitter</h2>
       </div>
       <br />
       <%= form_for :session, url: session_path do |form| %>
@@ -20,19 +20,16 @@
           <%= form.label :password %>
           <div class="control has-icons-left">
               <%= form.password_field :password %>
-              
           </div>
         </div>
-        <%= link_to t(".*forgot_password"), new_password_path %>
-        
-        
         <div class="other-links">
           <div class="submit-field">
           <%= form.submit %>
           </div>
           <% if Clearance.configuration.allow_sign_up? %>
             <%= link_to t(".sign_up_for_twitter"), sign_up_path %>
-          <% end %> 
+          <% end %>      
+          <%= link_to t(".*forgot_password"), new_password_path %>
         </div>
   
         <% end %>
