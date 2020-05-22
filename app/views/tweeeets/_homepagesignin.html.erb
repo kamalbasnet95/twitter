@@ -1,8 +1,8 @@
-<div class="container">
+<div class="column is-one-quarter">
 <% if signed_in? %>
  <%= render 'trendsforyou' %> 
  <% else %>
-  <div class="column is-one-quarter">
+  <div class="column">
     <div id="clearance" class="sign-in">
       <div class="has-text-centered">
       <i class="fa fa-twitter" ></i>
@@ -38,7 +38,7 @@
   
         <% end %>
       </div>
-    </div> 
+  </div>
  </div>
- </div>
+</div>
 <% end %>
