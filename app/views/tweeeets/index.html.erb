@@ -3,6 +3,8 @@
   <div class="columns">
   	<% if signed_in? %>
     <%= render 'trends' %>
+    <%= render 'feed' %>
+    <%= render 'homepagesignin' %> 
     <%else%>
     <%= render 'feed' %>
     <%= render 'homepagesignin' %> 
